@@ -1,0 +1,104 @@
+Program Pzim ;
+uses crt;
+var
+  presente,passado,futuro,verbo,radical,final:string;
+  qnt_letras:integer;
+Begin
+  clrscr;
+  write('Digite um verbo regular: ');
+  readln(verbo);
+  qnt_letras:=length(verbo);
+  radical:=copy(verbo,1,qnt_letras-2); 
+  final:=copy(verbo,qnt_letras-1,2);
+  if final='ar' then 
+	begin
+    writeln('Presente');
+    writeln;
+		writeln('eu ',radical,'o');
+    writeln('tu ',radical,'as');
+    writeln('ele ',radical,'a');
+    writeln('nós ',radical,'amos');
+    writeln('vós ',radical,'ais');
+    writeln('eles ',radical,'am');
+    writeln;
+    writeln('Pretérito Perfeito');
+    writeln;
+		writeln('eu ',radical,'ei');
+    writeln('tu ',radical,'aste');
+    writeln('ele ',radical,'ou');
+    writeln('nós ',radical,'amos');
+    writeln('vós ',radical,'astes');
+    writeln('eles ',radical,'aram');
+    writeln;
+    writeln('Futuro do presente');
+    writeln;
+		writeln('eu ',radical,'rei');
+    writeln('tu ',radical,'áras');
+    writeln('ele ',radical,'ará');
+    writeln('nós ',radical,'aremos');
+    writeln('vós ',radical,'areis');
+    writeln('eles ',radical,'arão');
+    writeln;
+  end;
+  if final='er' then 
+	begin
+  	writeln('Presente');
+    writeln;
+		writeln('eu ',radical,'o');
+    writeln('tu ',radical,'es');
+    writeln('ele ',radical,'e');
+    writeln('nós ',radical,'emos');
+    writeln('vós ',radical,'eis');
+    writeln('eles ',radical,'em');
+    writeln;
+    writeln('Pretérito Perfeito');
+    writeln;
+		writeln('eu ',radical,'i');
+    writeln('tu ',radical,'este');
+    writeln('ele ',radical,'eu');
+    writeln('nós ',radical,'emos');
+    writeln('vós ',radical,'estes');
+    writeln('eles ',radical,'eram');
+    writeln;
+    writeln('Futuro do presente');
+    writeln;
+		writeln('eu ',radical,'erei');
+    writeln('tu ',radical,'erás');
+    writeln('ele ',radical,'erá');
+    writeln('nós ',radical,'eremos');
+    writeln('vós ',radical,'ereis');
+    writeln('eles ',radical,'erão');
+    writeln;    
+	end;
+	if final='ir' then 
+	begin
+  	writeln('Presente');
+    writeln;
+		writeln('eu ',radical,'o');
+    writeln('tu ',radical,'es');
+    writeln('ele ',radical,'e');
+    writeln('nós ',radical,'imos');
+    writeln('vós ',radical,'is');
+    writeln('eles ',radical,'em');
+    writeln;
+    writeln('Pretérito Perfeito');
+    writeln;
+		writeln('eu ',radical,'i');
+    writeln('tu ',radical,'iste');
+    writeln('ele ',radical,'iu');
+    writeln('nós ',radical,'imos');
+    writeln('vós ',radical,'istes');
+    writeln('eles ',radical,'iram');
+    writeln;
+    writeln('Futuro do presente');
+    writeln;
+		writeln('eu ',radical,'irei');
+    writeln('tu ',radical,'irás');
+    writeln('ele ',radical,'irá');
+    writeln('nós ',radical,'iremos');
+    writeln('vós ',radical,'ireis');
+    writeln('eles ',radical,'irão');
+    writeln;    	  
+	end;  
+	readln;	   	    
+End.
