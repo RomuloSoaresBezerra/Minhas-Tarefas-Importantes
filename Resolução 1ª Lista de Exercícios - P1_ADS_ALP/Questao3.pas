@@ -5,6 +5,7 @@ const
 	horasMaxDia = 24;
 	minutosMaxHora = 60;
 	fusoMaxHorario = 24;
+
 var
 	horas, minutos,fuso, horaNoFuso: integer;
 	
@@ -34,8 +35,10 @@ Begin
 					if(horas=0) then horas:=24;
 					horaNoFuso:=(24+horas)+fuso;
 				end;			
-				if(horaNoFuso>24) then horaNoFuso:=horaNoFuso-24;
-				if(horaNoFuso=24) then horaNoFuso:=0;
+				if(horaNoFuso>24) then 
+					horaNoFuso:=horaNoFuso-24;
+				if(horaNoFuso=24) then 
+					horaNoFuso:=0;
 				writeln('O horário no fuso informado é: ',horaNoFuso,':',minutos,' hrs.');
 		  end;
 		end;	
